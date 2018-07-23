@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
+            <amx:outputText value="Currency Convertor" id="ot1"/>
+        </amx:facet>
+        <amx:panelFormLayout id="pfl1">
+            <amx:selectOneChoice label="From Currency" id="soc1" value="#{pageFlowScope.fromCurrency}">
+                <amx:selectItem id="si1" label="----" value=""/>
+                <amx:selectItem id="si2" label="Brazilian Real" value="BRL"/>
+                <amx:selectItem id="si3" label="U.S. Dolar" value="USD"/>
+                <amx:selectItem id="si4" label="Euro" value="EUR"/>
+            </amx:selectOneChoice>
+            <amx:selectOneChoice label="To Currency" id="soc2" value="#{pageFlowScope.toCurrency}">
+                <amx:selectItem id="si5" label="----" value=""/>
+                <amx:selectItem id="si6" label="Brazilian Real" value="BRL"/>
+                <amx:selectItem id="si7" label="U.S. Dolar" value="USD"/>
+                <amx:selectItem id="si8" label="Euro" value="EUR"/>
+            </amx:selectOneChoice>
+        </amx:panelFormLayout>
+        <amx:commandButton text="Currency Convertor" id="cb2" action="goResult"/>
+    </amx:panelPage>
+</amx:view>

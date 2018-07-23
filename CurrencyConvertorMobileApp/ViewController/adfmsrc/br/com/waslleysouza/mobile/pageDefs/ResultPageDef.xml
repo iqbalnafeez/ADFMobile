@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="ResultPageDef"
+                Package="br.com.waslleysouza.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <invokeAction id="ConversionRateInvoke" Binds="ConversionRate" Refresh="always"/>
+    <variableIterator id="variables" Refresh="always">
+      <variable Type="java.lang.Double" Name="ConversionRate_Return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.ConversionRate.result}"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="ConversionRate" RequiresUpdateModel="true" Action="invokeMethod" MethodName="ConversionRate"
+                  IsViewObjectMethod="false" DataControl="CurrencyConvertor" InstanceName="data.CurrencyConvertor"
+                  ReturnName="data.CurrencyConvertor.methodResults.ConversionRate_CurrencyConvertor_ConversionRate_result">
+      <NamedData NDName="FromCurrency" NDValue="#{pageFlowScope.fromCurrency}" NDType="java.lang.String"/>
+      <NamedData NDName="ToCurrency" NDValue="#{pageFlowScope.toCurrency}" NDType="java.lang.String"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="Return">
+      <AttrNames>
+        <Item Value="ConversionRate_Return"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

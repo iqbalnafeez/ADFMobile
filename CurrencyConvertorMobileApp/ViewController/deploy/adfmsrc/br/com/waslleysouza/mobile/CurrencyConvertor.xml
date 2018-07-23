@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.2.64.36" id="CurrencyConvertor"
+          Package="br.com.waslleysouza.mobile" BeanClass="br.com.waslleysouza.mobile.CurrencyConvertor"
+          isJavaBased="false">
+  <MethodAccessor IsCollection="false" Type="java.lang.Double" id="ConversionRate" ReturnNodeName="Return">
+    <ParameterInfo id="FromCurrency" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="ToCurrency" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

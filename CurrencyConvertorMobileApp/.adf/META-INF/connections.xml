@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="CurrencyConvertor" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+      <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+      <RefAddresses>
+         <XmlRefAddr addrType="WebServiceConnection">
+            <Contents>
+               <wsconnection description="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL" service="{http://www.webserviceX.NET/}CurrencyConvertor">
+                  <model name="{http://www.webserviceX.NET/}CurrencyConvertor" xmlns="http://oracle.com/ws/model">
+                     <service name="{http://www.webserviceX.NET/}CurrencyConvertor">
+                        <port name="CurrencyConvertorHttpPost" binding="{http://www.webserviceX.NET/}CurrencyConvertorHttpPost">
+                           <operation name="ConversionRate">
+                              <output name=""/>
+                              <input name=""/>
+                           </operation>
+                        </port>
+                        <port name="CurrencyConvertorHttpGet" binding="{http://www.webserviceX.NET/}CurrencyConvertorHttpGet">
+                           <operation name="ConversionRate">
+                              <output name=""/>
+                              <input name=""/>
+                           </operation>
+                        </port>
+                        <port name="CurrencyConvertorSoap12" binding="{http://www.webserviceX.NET/}CurrencyConvertorSoap12">
+                           <soap addressUrl="http://www.webservicex.net/CurrencyConvertor.asmx" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="ConversionRate">
+                              <soap soapAction="http://www.webserviceX.NET/ConversionRate" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <output name=""/>
+                              <input name=""/>
+                           </operation>
+                        </port>
+                        <port name="CurrencyConvertorSoap" binding="{http://www.webserviceX.NET/}CurrencyConvertorSoap">
+                           <soap addressUrl="http://www.webservicex.net/CurrencyConvertor.asmx" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="ConversionRate">
+                              <soap soapAction="http://www.webserviceX.NET/ConversionRate" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <output name=""/>
+                              <input name=""/>
+                           </operation>
+                        </port>
+                     </service>
+                  </model>
+               </wsconnection>
+            </Contents>
+         </XmlRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

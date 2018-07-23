@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="br.com.waslleysouza.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Result.amx" usageId="br_com_waslleysouza_mobile_ResultPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="br_com_waslleysouza_mobile_ResultPageDef" path="br.com.waslleysouza.mobile.pageDefs.ResultPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="CurrencyConvertor" path="br.com.waslleysouza.mobile.CurrencyConvertor"/>
+  </dataControlUsages>
+</Application>
